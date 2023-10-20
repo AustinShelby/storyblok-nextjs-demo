@@ -20,6 +20,7 @@ storyblokInit({
     recommended_tours: RecommendedTours,
   },
   enableFallbackComponent: true,
+  bridge: false,
 });
 
 export const StoryblokProvider = ({ children }: PropsWithChildren) => {
