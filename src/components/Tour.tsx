@@ -1,10 +1,11 @@
 import { renderRichText } from "@storyblok/react/rsc";
 import ReactDOMServer from "react-dom/server";
 import { Testimonial } from "./Testimonial";
+import { storyblokEditable } from "@storyblok/react/rsc";
 
 export const Tour = (params: any) => {
   return (
-    <main className="component pt-32 pb-16">
+    <main {...storyblokEditable(params.blok)} className="component pt-32 pb-16">
       <h1 className="text-3xl md:text-5xl font-bold">
         {"Taiwan Walking Tour"}
       </h1>
