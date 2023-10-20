@@ -1,6 +1,11 @@
+import { storyblokEditable } from "@storyblok/react/rsc";
+
 export const Hero = (params: any) => {
   return (
-    <section className="pt-32 pb-16 component">
+    <section
+      {...storyblokEditable(params.blok)}
+      className="pt-32 pb-16 component"
+    >
       <h1 className="text-center text-5xl md:text-7xl font-bold">
         {params.blok.headline}
       </h1>

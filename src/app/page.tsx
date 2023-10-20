@@ -14,7 +14,9 @@ const fetchHomePage = async () => {
   return response.data.story;
 };
 
-export default async function Home() {
+const Home = async () => {
   const story = await fetchHomePage();
   return <StoryblokStory story={story} />;
-}
+};
+
+export default Home;

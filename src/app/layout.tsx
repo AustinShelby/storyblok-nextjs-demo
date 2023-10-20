@@ -26,14 +26,9 @@ storyblokInit({
   apiOptions: {
     fetch: cachedFetch,
   },
-  bridge: draftMode().isEnabled,
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <StoryblokProvider>
       <html lang="en">
@@ -49,4 +44,6 @@ export default function RootLayout({
       </html>
     </StoryblokProvider>
   );
-}
+};
+
+export default RootLayout;
