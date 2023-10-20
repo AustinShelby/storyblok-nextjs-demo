@@ -1,7 +1,9 @@
+import { disableCaching } from "@/app/layout";
 import { getStoryblokApi, StoryblokStory } from "@storyblok/react/rsc";
 
 export const generateStaticParams = async () => {
   const client = getStoryblokApi();
+  disableCaching();
   const response = await client.getStories({
     content_type: "tour",
     version: process.env.NODE_ENV === "development" ? "draft" : "published",
