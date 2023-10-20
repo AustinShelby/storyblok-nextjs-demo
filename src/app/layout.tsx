@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { StoryblokProvider } from "@/components/StoryblokProvider";
 import Link from "next/link";
+import { draftMode } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ storyblokInit({
   apiOptions: {
     fetch: cachedFetch,
   },
+  bridge: draftMode().isEnabled,
 });
 
 export default function RootLayout({

@@ -8,6 +8,7 @@ import { Grid } from "./Grid";
 import { Feature } from "./Feature";
 import { Testimonial } from "./Testimonial";
 import { RecommendedTours } from "./RecommendedTours";
+import { draftMode } from "next/headers";
 
 storyblokInit({
   components: {
@@ -20,7 +21,7 @@ storyblokInit({
     recommended_tours: RecommendedTours,
   },
   enableFallbackComponent: true,
-  bridge: false,
+  // bridge: draftMode().isEnabled,
 });
 
 export const StoryblokProvider = ({ children }: PropsWithChildren) => {
