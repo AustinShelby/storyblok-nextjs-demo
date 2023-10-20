@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "rm -r .next"
+    "prebuild": "rm -rf .next"
   },
   "dependencies": {
     "@storyblok/react": "^2.4.7",
